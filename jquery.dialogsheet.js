@@ -49,6 +49,8 @@ DialogSheet.prototype = {
     }
   },
   show: function() {
+    if (this.isVisible) return;
+    
     var $element = this.$element;
     var willShowEvent = jQuery.Event('willShowDialogSheet', {
       dialogSheet: this
@@ -63,6 +65,8 @@ DialogSheet.prototype = {
     this.isVisible = true;
   },
   hide: function() {
+    if (!this.isVisible) return;
+    
     var $element = this.$element;
     var willHideEvent = jQuery.Event('willHideDialogSheet', {
       dialogSheet: this
