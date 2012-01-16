@@ -2,7 +2,7 @@ div.dialog-sheet {
   position: fixed;
   top: 0;
   left: 50%;
-  z-index: 99998;
+  z-index: 9998;
   overflow: hidden;
   width: 560px;
   margin: 0 0 0 -290px;
@@ -55,17 +55,25 @@ div.dialog-sheet-shadow {
   content: '';
   position: fixed;
   opacity: 0;
-  z-index: 99999;
+  z-index: 9999;
   top: -10px;
   left: 50%;
   width: 582px;
   height: 10px;
   margin-left: -290px;
-  -webkit-box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.4);
-  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.6);
+  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.6);
 }
 
 div.dialog-sheet.active ~ div.dialog-sheet-shadow {
   opacity: 1;
+}
+
+div.topbar ~ div.dialog-sheet {
+  top: 40px;
+}
+
+div.topbar ~ div.dialog-sheet-shadow {
+  top: 30px;
 }

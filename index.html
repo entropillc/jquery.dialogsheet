@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8" />
+	<meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 	<title>jquery.dialogsheet Demo</title>
 	<link rel="stylesheet" type="text/css" href="bootstrap.css"/>
@@ -10,11 +10,46 @@
 	<script type="text/javascript" src="jquery.dialogsheet.js"></script>
 	<style type="text/css">
 	  body {
-	    margin: 10px;
+	    margin: 50px 10px 10px;
 	  }
 	</style>
+	<script type="text/javascript">
+  	$(function() {
+	    var $dialog1 = $('#dialog1');
+	    $dialog1.bind('willShowDialogSheet', function(evt) {
+	    //  alert('willShowDialogSheet');
+	    });
+	    $dialog1.bind('didShowDialogSheet', function(evt) {
+	    //  alert('didShowDialogSheet');
+	    });
+	    $dialog1.bind('willHideDialogSheet', function(evt) {
+	    //  alert('willHideDialogSheet');
+	    });
+	    $dialog1.bind('didHideDialogSheet', function(evt) {
+	    //  alert('didHideDialogSheet');
+	    });
+  	});
+	</script>
 </head>
 <body>
+  <div class="topbar">
+    <div class="fill">
+      <div class="container">
+        <a class="brand" href="#">jquery.dialogsheet</a>
+        <ul class="nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <form action="" class="pull-right">
+          <input class="input-small" type="text" placeholder="Username">
+          <input class="input-small" type="password" placeholder="Password">
+          <button class="btn" type="submit">Sign in</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
   <a class="btn dialog-sheet" href="#dialog1">Open Dialog Sheet</a>
   
   <div class="dialog-sheet" id="dialog1">
